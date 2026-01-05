@@ -12,7 +12,6 @@ class CandleStickCore():
         self.resolution = resolution
     
     def get_data_from_nobitex(self):
-        base_url = "https://apiv2.nobitex.ir/market/udf/history"
 
         params = {
         "symbol": self.symbol,
@@ -21,6 +20,8 @@ class CandleStickCore():
         "to": self.to_timeframe
         }
 
-        res = requests.get(base_url, params=params)
+        base_url = f"https://apiv2.nobitex.ir/market/udf/history"
+
+        res = requests.get(base_url)
 
         return res
