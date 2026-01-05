@@ -20,7 +20,7 @@ class CandleStickCore():
         "to": self.to_timeframe
         }
 
-        base_url = f"https://apiv2.nobitex.ir/market/udf/history"
+        base_url = f"https://apiv2.nobitex.ir/market/udf/history?symbol={params['symbol']}&resolution={params['resolution']}&from={params['from']}&to={params['to']}"
 
         res = requests.get(base_url)
 
