@@ -30,7 +30,7 @@ class CandleStickCore():
         else:
             return res.status_code
     
-    def chart_to_file(self):
+    def chart_to_file(self, filename):
         chart_data = self.get_data_from_nobitex()
 
         df = pd.DataFrame({
@@ -46,8 +46,6 @@ class CandleStickCore():
         df[cols] = df[cols].apply(pd.to_numeric, errors='coerce')
 
         df.set_index('Date', inplace=True)
-
-        filename = uuid4()
 
         mpf.plot(
             df, 
