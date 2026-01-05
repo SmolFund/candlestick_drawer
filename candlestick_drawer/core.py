@@ -25,7 +25,7 @@ class CandleStickCore():
         res = requests.get(base_url)
 
         if res.ok:
-            return res
+            return res.json()
         else:
             return res.status_code
     
