@@ -55,12 +55,9 @@ class CandleStickCore():
             style='charles', 
             title=f'\n{self.symbol} Last 24 Hours',
             ylabel='Price',
-            volume=True,
+            volume=False,
             show_nontrading=False,
             savefig=dict(fname=f"{filename}.png", dpi=300, pad_inches=0.25)
         )
 
-
-
-
-        return df
+        return True
