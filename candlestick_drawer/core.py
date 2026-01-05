@@ -42,5 +42,24 @@ class CandleStickCore():
             'Volume': chart_data['v']
         })
 
+        cols = ['Open', 'High', 'Low', 'Close', 'Volume']
+        df[cols] = df[cols].apply(pd.to_numeric, errors='coerce')
+
+        df.set_index('Date', inplace=True)
+
+        filename = uuid4()
+
+        mpf.plot(
+            df, 
+            type='candle', 
+            style='charles', 
+            title=f'\n{self.symbol} Last 24 Hours',
+            ylabel='Price',
+            volume=True,
+            show_nontrading=False,
+        )
+
+
+
 
         return df
