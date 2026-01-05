@@ -28,3 +28,8 @@ class CandleStickCore():
             return res
         else:
             return res.status_code
+    
+    def chart_to_file(self):
+        chart_data = self.get_data_from_nobitex()
+
+        return chart_data
