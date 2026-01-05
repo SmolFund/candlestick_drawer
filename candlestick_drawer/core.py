@@ -57,7 +57,7 @@ class CandleStickCore():
             ylabel='Price',
             volume=True,
             show_nontrading=False,
-             savefig=dict(fname=f"{filename}.png", dpi=300, pad_inches=0.25)
+            savefig=dict(fname=f"{filename}.png", dpi=300, pad_inches=0.25)
         )
 
 
