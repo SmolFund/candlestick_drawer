@@ -16,7 +16,7 @@ class CandleStickCore():
 
         params = {
         "symbol": self.symbol,
-        "resolution": self.esolution,
+        "resolution": self.resolution,
         "from": self.timeframe,
         "to": self.to_timeframe
         }
