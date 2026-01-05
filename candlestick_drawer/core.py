@@ -7,8 +7,8 @@ import mplfinance as mpf
 class CandleStickCore():
     def __init__(self, symbol, timeframe, resolution):
         self.symbol = symbol
-        self.timeframe = timeframe
-        self.to_timeframe = timeframe * 60 * 60 #hours to seconds, since we need 24 hours and above, the base is on 24 hours for now.
+        self.timeframe = timeframe - (24 * 60 * 60)
+        self.to_timeframe = timeframe
         self.resolution = resolution
     
     def get_data_from_nobitex(self):
