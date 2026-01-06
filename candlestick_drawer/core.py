@@ -5,6 +5,7 @@ import time
 import pandas as pd 
 import mplfinance as mpf
 import io
+import base64
 
 class CandleStickCore():
     def __init__(self, symbol, timestamp, to_timestamp, resolution):
