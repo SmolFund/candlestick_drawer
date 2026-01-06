@@ -66,4 +66,20 @@ class CandleStickCore():
         return True
     
     def chart_to_base_64(self):
-        pass
+        df = self.chart_to_pandas()
+        buffer = io.BytesIO()
+
+        mpf.plot(
+            df, 
+            type='candle', 
+            style='charles', 
+            title=f'\n{self.symbol} Last 24 Hours',
+            ylabel='Price',
+            volume=False,
+            show_nontrading=False,
+            savefig=dict(fname=buffer, dpi=100, pad_inches=0.25)
+        )
+
+        buffer.seek(0)
+
+        return buffer
