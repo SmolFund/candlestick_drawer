@@ -7,12 +7,11 @@ import mplfinance as mpf
 import io
 
 class CandleStickCore():
-    def __init__(self, symbol, timestamp, to_timestamp, resolution, timeframe):
+    def __init__(self, symbol, timestamp, to_timestamp, resolution):
         self.symbol = symbol
         self.timestamp = timestamp
         self.to_timestamp = to_timestamp
         self.resolution = resolution
-        self.timeframe = timeframe
     
     def get_data_from_nobitex(self):
 
