@@ -6,11 +6,13 @@ import pandas as pd
 import mplfinance as mpf
 
 class CandleStickCore():
-    def __init__(self, symbol, timeframe, resolution):
+    def __init__(self, symbol, timestamp, resolution, interval, timeframe):
         self.symbol = symbol
-        self.timeframe = timeframe - (24 * 60 * 60)
-        self.to_timeframe = timeframe
+        self.timestamp = timestamp - (24 * 60 * 60)
+        self.to_timestamp = timestamp
         self.resolution = resolution
+        self.interval = interval
+        self.timeframe = timeframe
     
     def get_data_from_nobitex(self):
 
