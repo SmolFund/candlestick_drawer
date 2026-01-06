@@ -14,7 +14,7 @@ setup(
     long_description_content_type='text/markdown',
     long_description=long_description,
     packages=find_packages(),
-    install_requires=['opencv-python', 'mediapipe'],
+    install_requires=['mplfinance', 'pandas', 'requests'],
     keywords = ['finance', 'fintech', 'candlestick', 'candlestick charts', 'crypto'],
     classifiers = ["Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
