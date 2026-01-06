@@ -31,7 +31,7 @@ class CandleStickCore():
         else:
             return res.status_code
     
-    def chart_to_file(self, filename):
+    def chart_to_pandas(self):
         chart_data = self.get_data_from_nobitex()
 
         df = pd.DataFrame({
@@ -48,6 +48,10 @@ class CandleStickCore():
 
         df.set_index('Date', inplace=True)
 
+        return df
+    
+    def chart_to_file(self, filename):
+        df = self.chart_to_pandas()
         mpf.plot(
             df, 
             type='candle', 
