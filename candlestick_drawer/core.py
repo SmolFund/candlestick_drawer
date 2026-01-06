@@ -64,3 +64,6 @@ class CandleStickCore():
         )
 
         return True
+    
+    def chart_to_base_64(self):
+        pass
