@@ -19,8 +19,8 @@ class CandleStickCore():
         params = {
         "symbol": self.symbol,
         "resolution": self.resolution,
-        "from": self.timeframe,
-        "to": self.to_timeframe
+        "from": self.timestamp,
+        "to": self.to_timestamp
         }
 
         base_url = f"https://apiv2.nobitex.ir/market/udf/history?symbol={params['symbol']}&resolution={params['resolution']}&from={params['from']}&to={params['to']}"
