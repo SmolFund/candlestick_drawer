@@ -83,4 +83,11 @@ class CandleStickCore():
 
         buffer.seek(0)
 
-        return buffer
+        image_png_bytes = buffer.getvalue()
+        base64_bytes = base64.b64encode(image_png_bytes)
+
+        base64_string = base64_bytes.decode('utf-8')
+
+        buffer.close()
+
+        return base64_string
