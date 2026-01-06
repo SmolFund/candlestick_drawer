@@ -6,10 +6,10 @@ import pandas as pd
 import mplfinance as mpf
 
 class CandleStickCore():
-    def __init__(self, symbol, timestamp, resolution, interval, timeframe):
+    def __init__(self, symbol, timestamp, to_timestamp, resolution, interval, timeframe):
         self.symbol = symbol
-        self.timestamp = timestamp - (24 * 60 * 60)
-        self.to_timestamp = timestamp
+        self.timestamp = timestamp
+        self.to_timestamp = to_timestamp
         self.resolution = resolution
         self.interval = interval
         self.timeframe = timeframe
